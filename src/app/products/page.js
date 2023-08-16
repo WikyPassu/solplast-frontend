@@ -6,7 +6,6 @@ import { getAllProducts } from "@/services/solplast-service";
 import { useStatesContext } from "@/components/StatesContext";
 import BRANDS from "@/constants/Brands.json";
 import CheckBox from "@/components/CheckBox";
-import useWindowDimensions from "@/components/useWindowsDimensions";
 
 const Products = () => {
   const { setActiveLink, products, setProducts, categories, setCategories } = useStatesContext();
@@ -14,7 +13,6 @@ const Products = () => {
   const [ category, setCategory ] = useState("Todas");
   const [ brands, setBrands ] = useState(["solplast", "sp", "mascotas"]);
   const [ filteredProducts, setFilteredProducts ] = useState(null);
-  const { width } = useWindowDimensions();
 
   useEffect(() => setActiveLink("/products"), []);
 
@@ -60,10 +58,8 @@ const Products = () => {
         style={products === null ? { pointerEvents: "none", opacity: "0.4" } : {}}
         className={styles.filters}
       >
-        {
-          width < 657 ?
-          <div style={{display: "flex", flexDirection: "column", gap: ".2rem"}}>
-            <div className={styles.filter}>
+        <div className={styles.options}>
+          <div className={styles.filter}>
             <span>Buscar productos</span>
             <input
               type="text"
@@ -71,40 +67,18 @@ const Products = () => {
               placeholder="Descripción"
               onChange={handleOnChangeInput}
             />
-            </div>
-            <div className={styles.filter}>
-              <span>Categoría</span>
-              <select value={category} onChange={handleOnChangeSelect} >
-                { 
-                  categories.map((category, index) => (
-                    <option key={index} value={category}>{category}</option>
-                  ))
-                }
-              </select>
-            </div>
-          </div> :
-          <>
-            <div className={styles.filter}>
-              <span>Buscar productos</span>
-              <input
-                type="text"
-                value={search}
-                placeholder="Descripción"
-                onChange={handleOnChangeInput}
-              />
-            </div>
-            <div className={styles.filter}>
-              <span>Categoría</span>
-              <select value={category} onChange={handleOnChangeSelect} >
-                { 
-                  categories.map((category, index) => (
-                    <option key={index} value={category}>{category}</option>
-                  ))
-                }
-              </select>
-            </div>
-          </>
-        }
+          </div>
+          <div className={styles.filter}>
+            <span>Categoría</span>
+            <select value={category} onChange={handleOnChangeSelect} >
+              { 
+                categories.map((category, index) => (
+                  <option key={index} value={category}>{category}</option>
+                ))
+              }
+            </select>
+          </div>
+        </div>
         <div className={styles.filter}>
           <span>Marcas</span>
           <div className={styles.checkboxes}>

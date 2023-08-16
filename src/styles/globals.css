@@ -17,11 +17,11 @@ body {
   background-repeat: no-repeat;
   height: auto;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 main {
   margin: 0 10rem 0;
-  overflow-x: hidden;
 }
 
 section {
@@ -96,6 +96,7 @@ select {
 @media (max-width: 816px) {
   main {
     margin: 0 3rem 0;
+    overflow-x: hidden;
   }
 }
 

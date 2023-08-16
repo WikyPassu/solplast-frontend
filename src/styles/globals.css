@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(rgba(0, 174, 255, 0.1), transparent);
+  background-repeat: no-repeat;
+  height: auto;
+  background-attachment: fixed;
+}
+
+main {
+  margin: 0 10rem 0;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+}
+
+span {
+  color: #02098e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+img {
+  user-select: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+input[type=text] {
+  appearance: none;
+  padding: .3rem;
+  font-size: .9rem;
+  border: .1rem solid #afafaf;
+  box-shadow: inset 0 0 5px 0 #80808080;
+  border-radius: .25rem;
+}
+
+select {
+  padding: .3rem;
+  font-size: .9rem;
+  border: .1rem solid rgb(175, 175, 175);
+  box-shadow: inset 0 0 5px 0 rgba(128, 128, 128, 0.5);
+  border-radius: .25rem;
+}
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(rgba(0, 174, 255, 0.1), transparent);
+  background: #02098e;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border: .2rem solid #02098e;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1440px) {
+  main {
+    margin: 0 10rem 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  * {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 816px) {
+  main {
+    margin: 0 3rem 0;
+  }
+}
+
+@media (max-width: 464px) {
+  main {
+    margin: 0 1rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  * {
+    font-size: 75%;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "tags": ".top-anim",
+    "options": {
+      "origin": "top"
+    }
+  },
+  {
+    "tags": ".bottom-anim",
+    "options": {
+      "origin": "bottom"
+    }
+  },
+  {
+    "tags": ".left-anim",
+    "options": {
+      "origin": "left"
+    }
+  },
+  {
+    "tags": ".right-anim",
+    "options": {
+      "origin": "right"
+    }
+  }
+]

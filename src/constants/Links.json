@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Inicio",
+    "route": "/"
+  },
+  {
+    "label": "Productos",
+    "route": "/products"
+  },
+  {
+    "label": "Contacto",
+    "route": "/contact"
+  }
+]

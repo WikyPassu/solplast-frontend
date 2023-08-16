@@ -1,0 +1,89 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: .5rem;
+  padding: .5rem 1rem 1rem;
+  border: .2rem solid #02098e;
+  box-shadow: 0 0 10px #00000040;
+}
+
+.filters span {
+  font-size: 1rem;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  width: 12rem;
+  height: 100%;
+  padding: 1rem;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 0 10px #00000040;
+  text-align: center;
+}
+
+.cell .image {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cell img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cell p {
+  font-size: 1rem;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+@media (max-width: 1366px) {
+  .products {
+    margin-top: 5.5rem;
+  }
+}
+
+@media (max-width: 656px) {
+  .checkboxes {
+    flex-direction: column;
+    align-items: start;
+  }
+}

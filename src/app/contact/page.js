@@ -21,7 +21,7 @@ const Contact = () => {
           <div className={styles.description}>
             <span>Contactar por Mail</span>
             <div className={styles.text}>
-              <p>Adicionalmente, también podés enviarnos un email a nuestro correo eléctronico.</p>
+              <p>Podés enviarnos un email con tu consulta a nuestro correo eléctronico.</p>
               <div className={styles.info}>
                 <p>solplast-mr@hotmail.com</p>
               </div>
@@ -34,7 +34,7 @@ const Contact = () => {
           <div className={styles.description}>
             <span>Contactar por WhatsApp</span>
             <div className={styles.text}>
-              <p>Podés enviarnos tu consulta a través de nuestro número por WhatsApp.</p>
+              <p>También tenés disponible nuestro número de WhatsApp para enviarnos tu mensaje.</p>
               <div className={styles.info}>
                 <p>+54 9 11 6188-8416</p>
               </div>

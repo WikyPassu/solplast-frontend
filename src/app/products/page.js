@@ -10,7 +10,7 @@ import CheckBox from "@/components/CheckBox";
 const Products = () => {
   const { setActiveLink, products, setProducts, categories, setCategories } = useStatesContext();
   const [ search, setSearch ] = useState("");
-  const [ category, setCategory ] = useState("Todas");
+  const [ category, setCategory ] = useState("Cubrepiletas");
   const [ brands, setBrands ] = useState(["solplast", "sp", "mascotas"]);
   const [ filteredProducts, setFilteredProducts ] = useState(null);
 
@@ -37,7 +37,7 @@ const Products = () => {
     const data = await getAllProducts();
     setCategories(getCategories(data));
     setProducts(data);
-    setFilteredProducts(data);
+    setFilteredProducts(data.filter(({ category }) => category === "Cubrepiletas"));
   };
 
   const getCategories = data => {
